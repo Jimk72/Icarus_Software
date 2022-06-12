@@ -1,4 +1,5 @@
 # Icarus_Mod_Editor
+6/11/22 fixed some memory leaks in modmanager beta.
 
 6/9/22
 
