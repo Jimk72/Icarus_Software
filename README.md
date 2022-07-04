@@ -1,5 +1,32 @@
 # Icarus_Mod_Editor/manager
 
+7/4/22 Changed name to Icarus_Software, added description of mod manager.
+
+============= Mod Manager ==========
+Requires the download of unrealpak program.
+
+Features:
+Auto update non uasset mods to current week and adds them to the game.
+Can merge 2 mods into 1.
+Allows Update/PAK of all mods added with one click.
+
+Setup:
+When you first run it there will be a popup asking you to update settings and it looks for an unpacked data folder from game. So you may get a file not found message. This is normal. Once running select Edit from the main menu at top and click Settings. Here you need to select the Content folder for Icarus. It shows you just above the location it normaly is in. After That you need to select the UnrealPak.exe file that you downloaded from the discord Tools section. Then click save and close settings. Now you need to extract the data folder from the game. Just click Edit from the same menu and then select Update data Folder. This will use Unrealpak.exe to extract the data folder and place it in the mod managers folder. Your setup is now complete. Exit program and restart!
+
+The User Interface:
+The list on the left is all the extracted mods that have been added to the mod managed. The list on the lower right is a list of currently installed mods in the games mods folder. Once you click on an extracted mod the Add Mod to Game button will be enabled and a list of all the files the mod uses will be shown. This help when checking for compatibility of mods. If they contain the same file they are not compatible but can be merged into one mod using this program. At the bottom of the screen is the log info that explains what is going on.
+
+How it works:
+To add a mod to the manager you click on Extract Mod from Folder. Select your mods folder and click select folder. Then give it a unique name and click Add/Create. This will use the files in the extracted data folder to compare the files in your mod and extract only the modified items and create a new single file that is added to the mod manager. This file never needs updating. You just need to update the data folder after every game update. Repeat this for each mod you want to add to the manager. 
+To add a mod to game just select the Mod on the left and click Add Mod to Game. This will take the extracted mod data and reimport it into the updated data files from the game and then repack it and place in the games mods folder. To remove mods from the games mods folder just click on the Remove All Mods From Game. This just deletes the PAK files in the games mods folder.
+
+Folders used:
+The mod manager copies the folder from any added mod to its own folder. This allows mods that also contain uasset files to still use them when the program Paks the mod. You should also see a folder called data. This is the extracted data folder from the game. It contains all the updated json files from the game. Its important that you update your data folder anytime there is a game update. Just run the program and you should get a notification that there is an update and then select Edit and then Update data folder. All Extracted mods are in the extracted mods folder.
+
+Extracted Mods:
+These are single files that contain all the modified json for the mod. The structure is standard json and lists ModName and then an array of files that have changes and then the items modified as a json array. You could edit these just like the json files in the mod but they will only contain the items that have been originaly moddified when you extracted the mod. All the extracted mods are in the Extracted mods folder.
+
+
 6/11/22 fixed some memory leaks in modmanager beta.
 
 6/9/22
