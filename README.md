@@ -1,4 +1,4 @@
-# Icarus_Mod_Editor/manager
+# Icarus_Mod_manager
 
 7/10/22 Changed name to Icarus_Software, added description of mod manager.
 
