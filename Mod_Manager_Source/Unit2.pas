@@ -48,7 +48,7 @@ uses Unit1;
 
 procedure TForm2.Button1Click(Sender: TObject);
 begin
-Form1.ImportMod(label2.Caption,'','');
+Form1.ImportMod(label2.Caption,'',Form1.IcarusModsFolder,False);
 end;
 
 procedure TForm2.Button3Click(Sender: TObject);

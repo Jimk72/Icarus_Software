@@ -41,19 +41,24 @@ type
     Memo2: TMemo;
     Label5: TLabel;
     Button8: TButton;
+    ListBox2: TListBox;
+    Label8: TLabel;
+    Button9: TButton;
+    Button10: TButton;
     function UnpackFile(Filename:String;Location:String):Boolean;
     function RepackFile(FolderName:String;Location:String):Boolean;
     function CompareModFile(ModFilename,OrigFilename,CurFile: String):String;
     procedure GetDirectories(const Strings: TStrings; Directory: string;
       CurDirectory: string; IncludeFiles: Boolean);
     function getSpaces(aQuantity: integer): string;
+    function GetExtractedModFolder(ModName :String): String;
     function InsertLineBreaks(const aInput: string): string;
     function RemoveEmptyLines(const aInput: string): string;
     function RemoveWhiteSpace(const aInput: string): string;
     function JSONFormat(const aInput: string): string;
     function GetFiles(const StartDir: String; const List: TStrings): Boolean;
     function LoadItemJSON(const ItemName: String;const Filename: String): string;
-    function ImportMod(ModFile: String; Location: String; PakfileLocation:String): Boolean;
+    function ImportMod(ModFile: String; Location: String; PakfileLocation:String; IsMerge:Boolean): Boolean;
     function ExtractModData(ModFolder: String; ModName :String; OrigFolder :String; SaveFolder:String): Boolean;
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -71,6 +76,9 @@ type
     procedure Updatedatafolder1Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button8Click(Sender: TObject);
+    procedure FileListBox1DblClick(Sender: TObject);
+    procedure Button9Click(Sender: TObject);
+    procedure Button10Click(Sender: TObject);
   private
     { Private declarations }
    public
@@ -217,8 +225,11 @@ CurSelectedMod:=Filelistbox1.Directory+'\'+FileListBox1.Items[Filelistbox1.ItemI
    ModJSONObject := TJSONObject.ParseJSONValue(TFile.ReadAllText(Filelistbox1.Directory+'\'+FileListBox1.Items[Filelistbox1.ItemIndex]));
    // Get Mod Names
    ModNameString:=(ModJSONObject as TJSONObject).GetValue('ModName').value;
-   if (ModJSONObject as TJSONObject).FindValue('Readme')<>nil then
-   memo2.lines.Append((ModJSONObject as TJSONObject).FindValue('Readme').value)
+   //if (ModJSONObject as TJSONObject).FindValue('Readme')<>nil then
+   //memo2.lines.Append((ModJSONObject as TJSONObject).FindValue('Readme').value)
+   //else memo2.lines.Append('None avail.');
+   if FileExists(ExtractFilePath(Application.ExeName)+ModNameString+'\readme.txt') then
+   memo2.lines.LoadFromFile(ExtractFilePath(Application.ExeName)+ModNameString+'\readme.txt')
    else memo2.lines.Append('None avail.');
    Label7.Caption:= ModNameString;
    button4.Enabled:=true;
@@ -241,6 +252,11 @@ CurSelectedMod:=Filelistbox1.Directory+'\'+FileListBox1.Items[Filelistbox1.ItemI
    finally
     ModJSONObject.free;
    end;
+end;
+
+procedure TForm1.FileListBox1DblClick(Sender: TObject);
+begin
+Listbox2.Items.Append(FileListBox1.Items[Filelistbox1.ItemIndex]);
 end;
 
 procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -267,8 +283,10 @@ begin
 ReportMemoryLeaksOnShutdown := True;
 Application.HintHidePause := 6000;
 log.Lines.Append('Loading Options Data...');
-  appINI := TIniFile.Create(ChangeFileExt(Application.ExeName, '.ini'));
+appINI := TIniFile.Create(ChangeFileExt(Application.ExeName, '.ini'));
   try
+    if fileexists(ChangeFileExt(Application.ExeName, '.ini')) then
+    begin
     IcarusContentFolder := appINI.ReadString('Folder', 'IcarusContent', '');
     if IcarusContentFolder='' then ShowMessage('Please goto settings and update them!');
     IcarusDataPAK:=IcarusContentFolder+'\Data\data.pak';
@@ -294,14 +312,14 @@ log.Lines.Append('Loading Options Data...');
     CreateDir(IcarusModsFolder);
     FileListBox2.Directory := IcarusModsFolder;
     end;
-
+    log.Lines.Append('Options Data Loaded.');
+    end else ShowMessage('Please goto settings and update them!');
   finally
-  log.Lines.Append('Options Data Loaded.');
-    appINI.free;
+  appINI.free;
   end;
 end;
 
-function TForm1.ImportMod(ModFile: String; Location: String; PakfileLocation:String): Boolean;
+function TForm1.ImportMod(ModFile: String; Location: String; PakfileLocation:String; IsMerge:Boolean): Boolean;
 var
   selectedFile: TFileName;
   Icarusjson,Fulljson: Tjsonvalue;
@@ -326,9 +344,12 @@ if FileExists(ModFile) then
       // Get Mod Name
     //ModName:=Fulljson.GetValue('ModName').value;
       // Create Mod/data folders
-    Log.lines.Append('Creating Mod Folders.');
-    CreateDir(Location+(Fulljson as TJSONObject).FindValue('ModName').value);
-    CreateDir(Location+(Fulljson as TJSONObject).FindValue('ModName').value+'\data');
+    if IsMerge=false then
+      Begin
+      Log.lines.Append('Creating Mod Folders.');
+      CreateDir(Location+(Fulljson as TJSONObject).FindValue('ModName').value);
+      CreateDir(Location+(Fulljson as TJSONObject).FindValue('ModName').value+'\data');
+      End;
       // Get File array from mod
       //Filearr := Fulljson.GetValue('Rows') as TJSONArray;
       // Loop through each file from mod
@@ -351,12 +372,22 @@ if FileExists(ModFile) then
           // Create current mod files folder
           Log.lines.Append('Creating Mods data folder.');
           //curDir:=ExtractFilePath(Application.ExeName)+Fulljson.GetValue('ModName').value+'\data\';
-          CreateDir(ExtractFilePath(Location+(Fulljson as TJSONObject).GetValue('ModName').value+'\data\'+jFileName));
+          if IsMerge=false then CreateDir(ExtractFilePath(Location+(Fulljson as TJSONObject).GetValue('ModName').value+'\data\'+jFileName))
+          else CreateDir(ExtractFilePath(Location+'IMM_Merged_Mod\data\'+jFileName));
           Log.lines.Append(ExtractFilePath(jFileName)+' folder created.');
           //Origarr:=Icarusjson.GetValue('Rows') as TJSONArray;
           // Load Original json data
          try
-          Icarusjson := TJSONObject.ParseJSONValue(TFile.ReadAllText(ExtractFilePath(Application.ExeName)+'data'+'\'+jFileName));
+          if IsMerge=true then
+            begin
+            if FileExists(ExtractFilePath(Application.ExeName)+'IMM_Merged_Mod\data'+'\'+jFileName) then
+          Icarusjson := TJSONObject.ParseJSONValue(TFile.ReadAllText(ExtractFilePath(Application.ExeName)+'IMM_Merged_Mod\data'+'\'+jFileName))
+          else Icarusjson := TJSONObject.ParseJSONValue(TFile.ReadAllText(ExtractFilePath(Application.ExeName)+'data'+'\'+jFileName));
+            end else Icarusjson := TJSONObject.ParseJSONValue(TFile.ReadAllText(ExtractFilePath(Application.ExeName)+'data'+'\'+jFileName));
+          {else
+          if FileExists(ExtractFilePath(Application.ExeName)+'IMM_Merged_Mod\data'+'\'+jFileName) then
+          TJSONObject.ParseJSONValue(TFile.ReadAllText(ExtractFilePath(Application.ExeName)+'IMM_Merged_Mod\data'+'\'+jFileName))
+          else TJSONObject.ParseJSONValue(TFile.ReadAllText(ExtractFilePath(Application.ExeName)+'data'+'\'+jFileName));    }
           // Start header  json
           Log.lines.Append('Comparing File Header.');
           Tempjson:='{';
@@ -411,7 +442,8 @@ if FileExists(ModFile) then
           Tempjson:=Tempjson+']}';
           Log.lines.Append('Imported - '+jFileName);
           Memo1.Lines.Text:=JSONFormat(Tempjson);
-          Memo1.lines.SaveToFile(Location+(Fulljson as TJSONObject).GetValue('ModName').value+'\data\'+jFileName);
+          if IsMerge=false then Memo1.lines.SaveToFile(Location+(Fulljson as TJSONObject).FindValue('ModName').value+'\data\'+jFileName)
+          else Memo1.lines.SaveToFile(Location+'IMM_Merged_Mod\data\'+jFileName);
           Log.lines.Append('Saved - '+jFileName);
          finally
          Tempjson:='';
@@ -420,14 +452,17 @@ if FileExists(ModFile) then
         end;
 
       end;
-      Log.lines.Append((Fulljson as TJSONObject).FindValue('ModName').value+' has been succesfully Imported.');
-      Log.lines.Append('Re-PAKing '+(Fulljson as TJSONObject).FindValue('ModName').value);
-      if PakfileLocation='' then PakfileLocation:=IcarusModsFolder;
-      if RepackFile(Location+(Fulljson as TJSONObject).GetValue('ModName').value,PakfileLocation) then
-      begin
-      Log.lines.Append((Fulljson as TJSONObject).GetValue('ModName').value+' Mod was Created.');
-      //ShowMessage(ModName+' Mod was Created.');
-      end;
+      if IsMerge=false then
+        begin
+        Log.lines.Append((Fulljson as TJSONObject).FindValue('ModName').value+' has been succesfully Imported.');
+        Log.lines.Append('Re-PAKing '+(Fulljson as TJSONObject).FindValue('ModName').value);
+        if PakfileLocation='' then PakfileLocation:=IcarusModsFolder;
+        if RepackFile(Location+(Fulljson as TJSONObject).GetValue('ModName').value,PakfileLocation) then
+          begin
+          Log.lines.Append((Fulljson as TJSONObject).GetValue('ModName').value+' Mod was Created.');
+          //ShowMessage(ModName+' Mod was Created.');
+          end;
+        end else Log.lines.Append((Fulljson as TJSONObject).FindValue('ModName').value+' has been succesfully Added.');
     finally
       Fulljson.free;
     end;
@@ -450,7 +485,6 @@ TempListBox1.Clear;
 TempListBox2.Clear;
 memo1.Lines.Clear;
 GetDirectories(TempListBox1.Items, ModFolder, '', true);
-form5.ProgressBar1.StepIt;
 memo1.Lines.Append('{"ModName":"'+ModName+'","Rows":[');
 for I:= 0 to TempListBox1.Items.Count - 1 do
   begin
@@ -458,7 +492,6 @@ for I:= 0 to TempListBox1.Items.Count - 1 do
   if CurrentFile[1]='\' then  delete(CurrentFile,1,1);
   if ExtractFileExt(ModFolder+'\'+ CurrentFile)='.json' then
     begin
-    form5.ProgressBar1.StepIt;
     log.Lines.Append('Extracting json from '+ TempListBox1.Items[I]);
     ModJson:=(CompareModFile(ModFolder+'\'+ CurrentFile,OrigFolder+'\'+ CurrentFile,CurrentFile));
     if ModJson<>'none' then
@@ -469,7 +502,6 @@ for I:= 0 to TempListBox1.Items.Count - 1 do
     end;
   end;
 memo1.lines.Append('{"CurrentFile":"EndOfMod"}]}');
-form5.ProgressBar1.Position:=10;
 log.Lines.Append('Extraction complete!');
 ModJson:=memo1.text;
 memo1.Lines.Clear;
@@ -479,8 +511,70 @@ memo1.lines.SaveToFile(SaveFolder+'\'+ModName+'.EXMod');
 result:=true;
 end;
 
+function TForm1.GetExtractedModFolder(ModName :String): String;
+var
+ ModJSONObject : TJSonValue;
+ ModNameString: String;
+begin
+   try
+   ModJSONObject := TJSONObject.ParseJSONValue(TFile.ReadAllText(Filelistbox1.Directory+'\'+ModName));
+   // Get Mod Name
+   ModNameString:=(ModJSONObject as TJSONObject).GetValue('ModName').value;
+   result:=ModNameString;
+    finally
+    ModJSONObject.free;
+   end;
+end;
 
+procedure TForm1.Button10Click(Sender: TObject);
+var
+ModJSONObject : TJSonValue;
+currentMod,ModsList:String;
+Index:Integer;
+begin
 
+if listbox2.Items.Count>0 then
+  begin
+  // delete temp mod folder //
+  if System.SysUtils.DirectoryExists((ExtractFilePath(Application.ExeName)+'IMM_Merged_Mod')) then
+  DeleteDirectory(ExtractFilePath(Application.ExeName)+'IMM_Merged_Mod');
+  Log.lines.Append('Creating IMM_Merged_Mod Folders.');
+  CreateDir(ExtractFilePath(Application.ExeName)+'IMM_Merged_Mod');
+  CreateDir(ExtractFilePath(Application.ExeName)+'IMM_Merged_Mod\data');
+  memo2.Lines.Clear;
+  memo2.Lines.Append('Includes the following mods:');
+  for Index := 0 to ListBox2.Items.Count - 1 do
+    begin
+    CurrentMod:=GetExtractedModFolder(ListBox2.Items[Index]);
+    memo2.Lines.Append(CurrentMod);
+    if DirectoryExists(ExtractFilePath(Application.ExeName)+CurrentMod+'\data') then
+      begin
+      Log.lines.Append('Copying files from '+CurrentMod+' to IMM_Merged_Mod folder');
+      // mod contains data folder
+      if DirectoryExists(ExtractFilePath(Application.ExeName)+'IMM_Temp_Folder') then
+      DeleteDirectory(ExtractFilePath(Application.ExeName)+'IMM_Temp_Folder');
+      CreateDir(ExtractFilePath(Application.ExeName)+'IMM_Temp_Folder');
+      TDirectory.Copy(ExtractFilePath(Application.ExeName)+CurrentMod,ExtractFilePath(Application.ExeName)+'IMM_Temp_Folder');
+      DeleteDirectory(ExtractFilePath(Application.ExeName)+'IMM_Temp_Folder\data');
+      TDirectory.Copy(ExtractFilePath(Application.ExeName)+'IMM_Temp_Folder',ExtractFilePath(Application.ExeName)+'IMM_Merged_Mod');
+      end
+      else
+        begin
+        // mod does not contain data folder
+        end;
+    Log.lines.Append('Importing json from '+ListBox2.Items[Index]);
+    ImportMod(Filelistbox1.Directory+'\'+ListBox2.Items[Index],'','',true);
+    end;
+  end;
+  Log.lines.Append('All json has been Imported to IMM_Merged_Mod folder!');
+  Log.lines.Append('Saving list of added mods to the readme file in IMM_Merged_Mod folder.');
+  memo2.Lines.SaveToFile(ExtractFilePath(Application.ExeName)+'IMM_Merged_Mod\readme.txt');
+  Log.lines.Append('Re-PAKing IMM_Merged_Mod');
+  if RepackFile(ExtractFilePath(Application.ExeName)+'IMM_Merged_Mod',IcarusModsFolder) then
+   begin
+   Log.lines.Append('IMM_Merged_Mod was Created.');
+   end;
+end;
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
@@ -514,7 +608,7 @@ for i:= 0 to filelistbox2.Items.count-1 do
   modsname:=stringreplace(modsname, '_p.pak', '',[rfReplaceAll, rfIgnoreCase]);
   if FileExists(ExtractFilePath(Application.ExeName)+'Extracted Mods\'+modsname+'.EXmod') then
     begin
-    if ImportMod(ExtractFilePath(Application.ExeName)+'Extracted Mods\'+modsname+'.EXmod','','') then
+    if ImportMod(ExtractFilePath(Application.ExeName)+'Extracted Mods\'+modsname+'.EXmod','',IcarusModsFolder,False) then
     log.lines.Append(modsname+' Mod has been Updated!');
     end
     else
@@ -525,7 +619,7 @@ end;
 procedure TForm1.Button4Click(Sender: TObject);
 begin
 if fileexists(CurSelectedMod) then
-if ImportMod(CurSelectedMod,'','') then
+if ImportMod(CurSelectedMod,'',IcarusModsFolder,false) then
 ShowMessage('Mod has been added!');
 FileListBox2.Update;
 end;
@@ -546,8 +640,6 @@ with TFileOpenDialog.Create(nil) do
     FileTypes.Add.FileMask:= '*.pak';
     if Execute then
     begin
-    form5.show;
-    form5.ProgressBar1.Position:=1;
     modFolders:=GetFolders(filename);
     modFolders:=stringreplace( modFolders, '../../../Icarus/Content', '',[rfReplaceAll, rfIgnoreCase]);
     modFolders:=stringreplace( modFolders, '/', '\',[rfReplaceAll, rfIgnoreCase]);
@@ -561,12 +653,9 @@ with TFileOpenDialog.Create(nil) do
     log.lines.Append('Unpacking: '+filename+','+ExtractFilePath(Application.ExeName)+modsname+modFolders);
     UnpackFile(filename,ExtractFilePath(Application.ExeName)+modsname+modFolders);
     Sleep(3000);
-    form5.ProgressBar1.Position:=5;
     ExtractModData(ExtractFilePath(Application.ExeName)+modsname+'\data',modsname,OrigDataFolder,ExtractFilePath(Application.ExeName)+'Extracted Mods' );
-    form5.ProgressBar1.Position:=10;
     Sleep(3000);
     FileListBox1.Update;
-    form5.Hide;
     end;
 
   finally
@@ -618,12 +707,17 @@ for i:= 0 to filelistbox1.Items.count-1 do
   modsname:=filelistbox1.Items[i];
   if FileExists(ExtractFilePath(Application.ExeName)+'Extracted Mods\'+modsname) then
     begin
-    if ImportMod(ExtractFilePath(Application.ExeName)+'Extracted Mods\'+modsname,SaveLocation+'\',SaveLocation+'\') then
+    if ImportMod(ExtractFilePath(Application.ExeName)+'Extracted Mods\'+modsname,SaveLocation+'\',SaveLocation+'\',False) then
     log.lines.Append(modsname+' Mod has been Updated!');
     end
     else
     ShowMessage(modsname+'.EXmod does not exist in extracted folder!');
   end;
+end;
+
+procedure TForm1.Button9Click(Sender: TObject);
+begin
+Listbox2.clear;
 end;
 
 function TForm1.GetFolders(PAKfilename: string): string;

@@ -36,16 +36,14 @@ begin
 if DirectoryExists(edit1.Text) then
    begin
    Form1.log.Lines.Append('Creating Extracted mod');
-   form5.ProgressBar1.Position:=0;
-   form5.show;
    TDirectory.Copy(edit1.Text,ExtractFilePath(Application.ExeName)+edit3.Text);
    if DirectoryExists(edit1.Text+'\data') then
    form1.ExtractModData(edit1.Text+'\data',edit3.text,form1.OrigDataFolder,ExtractFilePath(Application.ExeName)+'Extracted Mods' )
    else
    form1.ExtractModData(edit1.Text,edit3.text,form1.OrigDataFolder,ExtractFilePath(Application.ExeName)+'Extracted Mods' );
    Sleep(3000);
+   if not DirectoryExists(ExtractFilePath(Application.ExeName)+edit3.Text+'\data') then CreateDir(ExtractFilePath(Application.ExeName)+edit3.Text+'\data');
    form1.FileListBox1.Update;
-   form5.close;
    close;
    end;
 end;
