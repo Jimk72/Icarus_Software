@@ -1,5 +1,11 @@
 # Icarus_Mod_manager
 
+7/24/22 Uploaded new version of Modmanager.
+
+Vers.0.3
+Fixed Bug the would duplicate files when importing a mod folder with no data folder.
+Complete revamp of UI to a more Icarus theme!
+
 7/10/22 Changed name to Icarus_Software, added description of mod manager.
 
 Vers.0.2
