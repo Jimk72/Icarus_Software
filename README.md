@@ -1,5 +1,25 @@
 # Icarus_Mod_manager
 
+8/14/22 New version on Mod Manager.
+
+Vers.0.4
+
+Reminder that mods with the data folder included work best!
+
+Changed the way mods were Extracted to help remove issues. 
+
+Fixed issue with Extracting from a PAK file with no data folder.
+
+Fixed bug I found when importing a mod folder with files that are not part of original game.
+
+Total rewrite of parsing/json text formating. Modded files should be same format as originals.
+
+Fixed issues with dialogs in json.
+
+Added image only support. This will display the image in the mod folder called ImageOnly.png. added some in the mod manager folder for examples.
+Paste the ImageOnlyFade over your image in your photo editor to give your image a nice fade in.
+
+
 7/24/22 Uploaded new version of Modmanager.
 
 Vers.0.3
