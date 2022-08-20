@@ -1,6 +1,21 @@
 # Icarus_Mod_manager
 
-8/14/22 New version on Mod Manager.
+8/19/22 New version on Mod Manager.
+
+Vers.0.5
+
+Rebuilt the entire way the extractor recreates the folder structure. It now uses the unpaked data folder from game to find each json file and then places the file in the correct folder for extraction. This should eliminate any issues with importing json mods that were packed at a folder other than data. Uasset mods are still extracted based off file structure of mod So when creating them the folder structure should contain the data folder in the PAK file.
+
+sample_mod_name\data
+
+sample_mod_name\BP\Objects\World\Items\Deployables\Extractors\BP_Extractor.uasset
+
+Streamlined the extraction process to help eliminate possible errors from faulty mods.
+
+Extensive testing with as many pak files/mod folders as I could download. 
+
+Researching the possibility of extracting items json at a more line by line instead of item only. This would allow better compatability when they update a part of an item. As it is now extraction is at a per item level. Each json file has rows of items and if any setting in an item is changed then the whole item is extracted. I designed is this way as every json file structure is based on a single row with items listed. Makes an extraction process the same for all files, simplifying the process.
+
 
 Vers.0.4
 
