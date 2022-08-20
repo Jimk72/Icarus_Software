@@ -5,7 +5,9 @@
 Vers.0.5
 
 Rebuilt the entire way the extractor recreates the folder structure. It now uses the unpaked data folder from game to find each json file and then places the file in the correct folder for extraction. This should eliminate any issues with importing json mods that were packed at a folder other than data. Uasset mods are still extracted based off file structure of mod So when creating them the folder structure should contain the data folder in the PAK file.
+
 sample_mod_name\data
+
 sample_mod_name\BP\Objects\World\Items\Deployables\Extractors\BP_Extractor.uasset
 
 Streamlined the extraction process to help eliminate possible errors from faulty mods.
