@@ -10,7 +10,7 @@ Example:
 old version would extract:
 
 
-...
+
 {
             "Name": "Exotic",
             "ResourceType": {
@@ -29,7 +29,7 @@ New version only extracts:
             "Name": "Exotic",
             "MiningTimeSeconds": 10
             },
-...
+
 
 
 So If they were to add a new value to Exotic the old version would ignore this new value possibly causing new missions to be unfinishable. The new version finds the value "MiningTimeSeconds" and only changes that.
