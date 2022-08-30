@@ -20,7 +20,11 @@ old version would extract:
             "Metadata": {
                 "bIsDeprecated": true
             },
+            
+            
 New version only extracts:
+
+
 {
             "Name": "Exotic",
             "MiningTimeSeconds": 10
