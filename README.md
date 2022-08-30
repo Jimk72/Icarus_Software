@@ -8,7 +8,9 @@ Last version was a total re-write of extractor, This is a total re-write of the 
 
 Example:
 old version would extract:
-....
+
+
+...
 {
             "Name": "Exotic",
             "ResourceType": {
@@ -23,7 +25,9 @@ New version only extracts:
             "Name": "Exotic",
             "MiningTimeSeconds": 10
             },
-....
+...
+
+
 So If they were to add a new value to Exotic the old version would ignore this new value possibly causing new missions to be unfinishable. The new version finds the value "MiningTimeSeconds" and only changes that.
 
 Streamlined how mods were merged! All mods are now merged together and then re-imported into the game files. This drasticly reduces time to merge several mods into one and import to game.
