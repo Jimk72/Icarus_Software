@@ -1,5 +1,44 @@
 # Icarus_Mod_manager
 
+8/29/22 Latest version of Mod Manager Uploaded
+
+Vers.0.6
+
+Last version was a total re-write of extractor, This is a total re-write of the import/merge function. This version Extracts/Imports at the Items Values instead of just complete Items. This should fix issues where the Devs add a new value to an item(like attachments) causing the mod to break. It now will only extract the changed value of an item. This is only one level down so only the main values of each item. 
+
+Example:
+old version would extract:
+{
+            "Name": "Exotic",
+            "ResourceType": {
+                "RowName": "Meta_Resource"
+            },
+            "MiningTimeSeconds": 10,
+            "Metadata": {
+                "bIsDeprecated": true
+            },
+New version only extracts:
+{
+            "Name": "Exotic",
+            "MiningTimeSeconds": 10
+            },
+So If they were to add a new value to Exotic the old version would ignore this new value possibly causing new missions to be unfinishable. The new version finds the value "MiningTimeSeconds" and only changes that.
+
+Streamlined how mods were merged! All mods are now merged together and then re-imported into the game files. This drasticly reduces time to merge several mods into one and import to game.
+
+Added support for mods to have ImageOnly.png this will load the image into Mod Manager and allow it to be scrolled down. The Width can only be 560 px but the height can be more just like the text and just mouse wheel scroll down to see more of the image.
+
+Added a blend image over the banner image to help blend thing into the UI.
+
+Added the option to choose when a conflicting json change is found. The two different versions of the Items value will be displayed and you can choose the version you want to add. If you dont want to choose you can select default and it will merge them the old way by order they were added. 
+
+Added a pdf version of the instructions as well as a version in the mod manager that always displays at start up. Almost every issue people reported to me were user error so I am trying to eliminate those with providing as many ways to read directions as possible.
+
+Added as many error catches as possible. Most errors are user/mod errors so I tried to show why the error occured so the user will better understand what went wrong.
+
+Ive extracted every mod I could find and imported/merged them many different ways and had no issues so hopefully that holds true with new users.
+
+
 8/19/22 New version on Mod Manager.
 
 Vers.0.5
