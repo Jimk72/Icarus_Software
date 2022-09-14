@@ -2,6 +2,16 @@
 
 8/29/22 Latest version of Mod Manager Uploaded
 
+Vers.0.7
+
+Added New editor for extracted mods. Right click extracted mod and select edit to bring up the editor.
+
+Fixed issue with mod names containing _P
+
+Updated the way the program acts when a new user runs it for the first time. Now it makes you edit the settings and then confirms you selected the right folder.
+
+Added more info for when an error happens.
+
 Vers.0.6
 
 Last version was a total re-write of extractor, This is a total re-write of the import/merge function. This version Extracts/Imports at the Items Values instead of just complete Items. This should fix issues where the Devs add a new value to an item(like attachments) causing the mod to break. It now will only extract the changed value of an item. This is only one level down so only the main values of each item. 
