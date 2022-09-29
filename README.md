@@ -6,6 +6,8 @@ Vers.0.8
 
 Fixed Issue with files having same name as mod.
 
+Fixed Issue of added mods not showing up in mods folder in UI.
+
 Removed Add Mod to Game button! 
 
 Added more options when rightclicking an extracted mod:
