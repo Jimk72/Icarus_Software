@@ -1,5 +1,24 @@
 # Icarus_Mod_manager
 
+9/29/22 Latest version of Mod Manager Uploaded
+
+Vers.0.8
+
+Fixed Issue with files having same name as mod.
+
+Removed Add Mod to Game button! 
+
+Added more options when rightclicking an extracted mod:
+
+            Add mod to Game, Adds paks and places file in games mods folder.(Replaced the old Add Mod to Game) button
+            
+            Edit Mod, Brings up a mod editor and allows fast editing by clicking the files in mod and then selecting the item to edit will take you right to the spot in the mod file.
+            Delete, This deletes the mod from mod manager.
+            
+Updated Mod Editor to latest version. This is what I use to create my mods fast. 
+
+
+
 8/29/22 Latest version of Mod Manager Uploaded
 
 Vers.0.7
