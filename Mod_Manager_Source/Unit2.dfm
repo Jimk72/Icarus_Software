@@ -1,173 +1,202 @@
 object Form2: TForm2
   Left = 0
   Top = 0
-  Caption = 'Mod Merger'
-  ClientHeight = 819
-  ClientWidth = 1321
-  Color = clBtnFace
+  Caption = 'Selection'
+  ClientHeight = 861
+  ClientWidth = 1309
+  Color = 2368807
   Font.Charset = DEFAULT_CHARSET
-  Font.Color = clWindowText
+  Font.Color = 2143487
   Font.Height = -11
-  Font.Name = 'Tahoma'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   OldCreateOrder = False
+  OnMouseWheel = FormMouseWheel
   DesignSize = (
-    1321
-    819)
+    1309
+    861)
   PixelsPerInch = 96
   TextHeight = 13
-  object Label7: TLabel
-    Left = 8
-    Top = 8
-    Width = 108
-    Height = 13
-    Caption = 'Mod 1 Extracted data:'
-  end
-  object Label8: TLabel
-    Left = 8
-    Top = 64
-    Width = 108
-    Height = 13
-    Caption = 'Mod 2 Extracted data:'
-  end
-  object Label9: TLabel
-    Left = 480
-    Top = 8
-    Width = 93
-    Height = 13
-    Caption = 'Merged Mod Name:'
-  end
   object Label1: TLabel
-    Left = 672
-    Top = 32
-    Width = 96
-    Height = 16
-    Caption = 'Resulting json:'
+    Left = 1
+    Top = 105
+    Width = 653
+    Height = 25
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Current Value'
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
+    Font.Color = 2143487
+    Font.Height = -19
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold, fsItalic]
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 736
-    Top = 13
-    Width = 31
-    Height = 13
-    Caption = 'Label2'
-    Visible = False
-  end
-  object Edit1: TEdit
-    Left = 8
-    Top = 27
-    Width = 425
-    Height = 21
-    TabOrder = 0
-    Text = 'F:\Mods\Extracted Mods\Floof_ModPack.JKMod'
-  end
-  object Button3: TButton
-    Left = 433
-    Top = 25
-    Width = 25
+    Left = 654
+    Top = 105
+    Width = 653
     Height = 25
-    Caption = '...'
-    TabOrder = 1
-    OnClick = Button3Click
-  end
-  object Edit2: TEdit
-    Left = 8
-    Top = 83
-    Width = 425
-    Height = 21
-    TabOrder = 2
-    Text = 'F:\Mods\Extracted Mods\CritFail_FHCOMPLETE.JKMod'
-  end
-  object Button4: TButton
-    Left = 433
-    Top = 81
-    Width = 25
-    Height = 25
-    Caption = '...'
-    TabOrder = 3
-    OnClick = Button4Click
-  end
-  object Button5: TButton
-    Left = 480
-    Top = 64
-    Width = 161
-    Height = 42
-    Caption = 'START'
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'New Value'
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clBtnText
-    Font.Height = -13
-    Font.Name = 'Tahoma'
+    Font.Color = 2143487
+    Font.Height = -19
+    Font.Name = 'Segoe UI'
     Font.Style = [fsBold, fsItalic]
     ParentFont = False
-    TabOrder = 4
-    OnClick = Button5Click
   end
-  object Mod2Files: TListBox
-    Left = 816
-    Top = 198
-    Width = 153
-    Height = 0
+  object Label3: TLabel
+    Left = 60
+    Top = 8
+    Width = 141
+    Height = 17
+    Alignment = taCenter
+    Caption = 'Currently Merging Mod:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = 2143487
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 372
+    Top = 8
+    Width = 69
+    Height = 17
+    Alignment = taCenter
+    Caption = 'Current File:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = 2143487
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 702
+    Top = 8
+    Width = 75
+    Height = 17
+    Alignment = taCenter
+    Caption = 'Current Item:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = 2143487
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 1
+    Top = 35
+    Width = 248
+    Height = 25
+    Alignment = taCenter
+    AutoSize = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = 2143487
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 273
+    Top = 35
+    Width = 289
+    Height = 25
+    Alignment = taCenter
+    AutoSize = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = 2143487
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label8: TLabel
+    Left = 568
+    Top = 35
+    Width = 337
+    Height = 25
+    Alignment = taCenter
+    AutoSize = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = 2143487
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label9: TLabel
+    Left = 1064
+    Top = 8
+    Width = 81
+    Height = 17
+    Alignment = taCenter
+    Caption = 'Current Value:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = 2143487
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 932
+    Top = 35
+    Width = 369
+    Height = 25
+    Alignment = taCenter
+    AutoSize = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = 2143487
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Memo1: TMemo
+    Left = 1
+    Top = 136
+    Width = 653
+    Height = 725
     Anchors = [akLeft, akTop, akBottom]
-    ItemHeight = 13
-    TabOrder = 5
-    Visible = False
-  end
-  object Mod2Items: TListBox
-    Left = 744
-    Top = 312
-    Width = 130
-    Height = 0
-    Anchors = [akLeft, akTop, akBottom]
-    ItemHeight = 13
-    TabOrder = 6
-    Visible = False
-  end
-  object Memo3: TMemo
-    Left = 8
-    Top = 112
-    Width = 643
-    Height = 697
+    Color = clMedGray
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Lines.Strings = (
-      'Messages:')
-    ScrollBars = ssVertical
-    TabOrder = 7
-  end
-  object Edit3: TEdit
-    Left = 480
-    Top = 27
-    Width = 171
-    Height = 21
-    TabOrder = 8
-    Text = 'MergedMod'
-  end
-  object Memo4: TMemo
-    Left = 657
-    Top = 54
-    Width = 656
-    Height = 755
-    Anchors = [akLeft, akTop, akRight, akBottom]
-    ScrollBars = ssVertical
-    TabOrder = 9
-  end
-  object Button1: TButton
-    Left = 1160
-    Top = 25
-    Width = 139
-    Height = 25
-    Caption = 'Create PAK file'
-    Enabled = False
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold, fsItalic]
+      '')
     ParentFont = False
-    TabOrder = 10
-    OnClick = Button1Click
+    ScrollBars = ssVertical
+    TabOrder = 0
+    OnMouseEnter = Memo1MouseEnter
+    OnMouseLeave = Memo1MouseLeave
+  end
+  object Memo2: TMemo
+    Left = 654
+    Top = 136
+    Width = 653
+    Height = 725
+    Anchors = [akLeft, akTop, akBottom]
+    Color = clMedGray
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Lines.Strings = (
+      '')
+    ParentFont = False
+    ScrollBars = ssVertical
+    TabOrder = 1
+    OnMouseEnter = Memo2MouseEnter
+    OnMouseLeave = Memo2MouseLeave
   end
 end

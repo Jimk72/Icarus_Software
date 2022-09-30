@@ -3,19 +3,22 @@ unit Unit4;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls,System.IOUtils, Vcl.ComCtrls;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, System.IOUtils,
+  Vcl.ComCtrls,
+  Vcl.Imaging.pngimage, tiaonImageButton;
 
 type
   TForm4 = class(TForm)
-    Button1: TButton;
     Label1: TLabel;
     Label3: TLabel;
     Edit1: TEdit;
-    Button2: TButton;
     Edit3: TEdit;
-    procedure Button1Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
+    tiaonImageButton2: TtiaonImageButton;
+    tiaonImageButton1: TtiaonImageButton;
+    procedure tiaonImageButton2Click(Sender: TObject);
+    procedure tiaonImageButton1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,35 +34,24 @@ implementation
 
 uses Unit1, Unit5;
 
-procedure TForm4.Button1Click(Sender: TObject);
+procedure TForm4.tiaonImageButton1Click(Sender: TObject);
 begin
-if DirectoryExists(edit1.Text) then
-   begin
-   Form1.log.Lines.Append('Creating Extracted mod');
-   TDirectory.Copy(edit1.Text,ExtractFilePath(Application.ExeName)+edit3.Text);
-   if DirectoryExists(edit1.Text+'\data') then
-   form1.ExtractModData(edit1.Text+'\data',edit3.text,form1.OrigDataFolder,ExtractFilePath(Application.ExeName)+'Extracted Mods' )
-   else
-   form1.ExtractModData(edit1.Text,edit3.text,form1.OrigDataFolder,ExtractFilePath(Application.ExeName)+'Extracted Mods' );
-   Sleep(3000);
-   if not DirectoryExists(ExtractFilePath(Application.ExeName)+edit3.Text+'\data') then CreateDir(ExtractFilePath(Application.ExeName)+edit3.Text+'\data');
-   form1.FileListBox1.Update;
-   close;
-   end;
+  if DirectoryExists(Edit1.Text) then
+    form1.ImportModSelected(Edit1.Text, Edit3.Text);
 end;
 
-procedure TForm4.Button2Click(Sender: TObject);
+procedure TForm4.tiaonImageButton2Click(Sender: TObject);
 begin
-with TFileOpenDialog.Create(nil) do
-  try
-    Title:='Select Mod folder.';
-    Options := [fdoPickFolders];
-    if Execute then
-    edit1.text:=Filename;
-
-  finally
-    Free;
-  end;
+  with TFileOpenDialog.Create(nil) do
+    try
+      Title := 'Select Mod folder.';
+      Options := [fdoPickFolders];
+      if Execute then
+        Edit1.Text := Filename;
+      Edit3.Text := ExtractFileName(Filename);
+    finally
+      Free;
+    end;
 end;
 
 end.
