@@ -12,7 +12,7 @@ Removed Add Mod to Game button!
 
 Added more options when rightclicking an extracted mod:
 
-1. Add mod to Game, Adds paks and places file in games mods folder.(Replaced the old Add Mod to Game) button
+1. Add mod to Game, paks and places mod in games mods folder.(Replaced the old Add Mod to Game) button
             
 2. Edit Mod, Brings up a mod editor and allows fast editing by clicking the files in mod and then selecting the item to edit will take you right to the spot in the mod file. Make sure you click Save Changes!
 3. Delete, This deletes the mod from mod manager.
