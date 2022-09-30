@@ -17,6 +17,8 @@ Added more options when rightclicking an extracted mod:
 2. Edit Mod, Brings up a mod editor and allows fast editing by clicking the files in mod and then selecting the item to edit will take you right to the spot in the mod file.
 3. Delete, This deletes the mod from mod manager.
             
+Added several new extracted mods.
+
 Updated Mod Editor to latest version. This is what I use to create my mods fast. 
 
 
