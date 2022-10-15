@@ -6,6 +6,10 @@ Vers.0.9
 
 Fixed a bug I found when merging mods with item names with same name of other mods.
 
+Added UnrealPak to the folder so no need to download seperately. 
+
+Added search for files for new installs. When ran for the first time it will not search for the Icarus install and auto setup!
+
 Added more options when rightclicking an extracted mod:
 
 1. Rename Mod: This allows you to rename the mod. It changes the mods folder name and the json mods name So you dont have to manualy go through the files to do this anymore.
