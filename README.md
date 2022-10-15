@@ -8,19 +8,19 @@ Fixed a bug I found when merging mods with item names with same name of other mo
 
 Added more options when rightclicking an extracted mod:
 
-    Rename Mod: This allows you to rename the mod. It changes the mods folder name and the json mods name So you dont have to manualy go through the files to do this anymore.
+1. Rename Mod: This allows you to rename the mod. It changes the mods folder name and the json mods name So you dont have to manualy go through the files to do this anymore.
 
-    Copy Mod: Use this if you want to make changes to a mod but dont want to mess up the original, or if you want to create a similar mod to one that you already have.
+2. Copy Mod: Use this if you want to make changes to a mod but dont want to mess up the original, or if you want to create a similar mod to one that you already have.
 
-    Refresh: This refreshes the list of Extracted mods. Incase it didnt auto update.
+3. Refresh: This refreshes the list of Extracted mods. Incase it didnt auto update.
 
 Also added a right click menu in the Mods to Install list. Remove: This will remove the mod from the list so you dont have to start all over if you click on the wrong mod. Does not remove mod from mod manager, only from this list!
 
 Added a right click menu to the "Install All Listed Mods" button.
 
-Create new mod from list: This will allow you to merge the listed mods and create a new mod with a new name! So instead of IMM_Merged_Mod_P it will be whatever name you give it. Example: Online_Combo, or Offline_Exotics ect.. 
+1. Create new mod from list: This will allow you to merge the listed mods and create a new mod with a new name! So instead of IMM_Merged_Mod_P it will be whatever name you give it. Example: Online_Combo, or Offline_Exotics ect.. 
 
-Create PAK files from list: Selecting this allows you to select a folder of your choice and will PAK each mod in the list in its own PAK file and place in the folder you selected. This Is used for when you want to update your mods to the new week and share them. Just put all the ones you want in the Mods to Install list and select and they will all be updated and added to the folder you choose.
+2. Create PAK files from list: Selecting this allows you to select a folder of your choice and will PAK each mod in the list in its own PAK file and place in the folder you selected. This Is used for when you want to update your mods to the new week and share them. Just put all the ones you want in the Mods to Install list and select and they will all be updated and added to the folder you choose.
 
 
 
