@@ -1,5 +1,20 @@
 # Icarus_Mod_manager
 
+11/26/22 Updated Mod Manager
+
+Vers 1.1
+
+Fixed bug of old uasset files staying when they should be removed.
+
+Fixed bug of json files staying when they should be removed.
+
+*** New addition to PAK files made from Mod Manager ***
+
+Mod Manager now PAKs the EXMod file in the PAK file. This will not effect the game as with added PNG files they are not loaded. If you are creating mods and pack with the mod manager the json value used when importing back into Mod Manager will be from the EXMod file not the included json files! This is an attempt to prevent someone importing an old PAK file to New JSON game files. Once you have created your mod and PAK it with the mod manager it will extract your changes and create a EXMod file that when importing back into Mod Manager from another user will be used instead of the outdated JSON files that are included. 
+
+Mod Version 1.1 and on will look for the EXMod file and use that. If you do not create mods this will have little effect on you accept allowing you to download outdated PAK files that were created with Version 1.1 or later and still add them to Mod Manager and then the game without all the JSON mismatch issues.
+
+
 10/15/22 Updated Mod Manager 
 
 Vers.0.9
