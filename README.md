@@ -9,7 +9,12 @@ Fixed bug when merging mods it would add the EXMOD files from all merged mods to
 
 Added new function to help reduce cluter and prevent using merged mods as new mods and then having issues with updates of only one of the added mods.
 
+Video: https://youtu.be/-4DFoDnSBJ4
+
 -Instead of creating new merged mod from mod list you can right click list of added mods and select "Save List" this will save the list of those mods to the mods folder. When you want to play that combination of mods you just right click the list area and select "Load List" and select your saved list and then click "Install All Listed Mods". This solves the issue of having one mod go bad and then you cant use the merged mod anymore. By doing it this way you can fix the mod with the issues and then just reload the list and add to game. It also keeps your list of mods on left to the minumum and doesnt cluter it with different versions of merged mods. Each merged mod that you save is a copy of all the merged files so the more merged mods you save and rename the more drive data is used. The new method just creates a list of the mods you want use and keeps the files in there original mod file location. If you edit a Uasset file in the original mod folder it will be used in all list versions as it doesnt clone any files just pulls from original.
+
+Updated Mod Editor to ver 3.1
+video: https://youtu.be/IbYv4DkpSwA
 
 
 11/26/22 Updated Mod Manager
