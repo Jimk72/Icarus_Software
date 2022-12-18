@@ -1,4 +1,26 @@
 # Icarus_Mod_manager
+12/18/22 Update Mod Manager
+
+Mod Manager ver 1.3
+
+Fixed bug with deleting Uasset files in the data folder
+
+Fixed bug with extraction of weekly update.
+
+Added a new setting to scale UI up and adjust fonts for people using on a 4K tv.
+
+Weekly updates are no longer auto updated when you run the program. You will have to manualy click the update data folder button when an update needs to be done.
+
+Changed entire UI including creating custom button class so they can be dynamicaly loaded on run.
+
+In setting form you can now right click and bring up a menu to change colors of app.
+
+You can also change the background image of app. I was going to redo the app to match the new logo and artwork but many like the way it is so I changed it so anyone can change the entire UI color/background image. 
+
+If you change colors and decide you want to go back to default, just open the mod manager ini file and delete the entries under settings that has custom colors, save changes and reload program.
+
+Also if you want the default buttons back just delete the button images and it will use the default ones in the program. Same with background image.
+
 
 
 12/4/22 Update Mod Manager and Mod Editor
