@@ -1,4 +1,14 @@
 # Icarus_Mod_manager
+12/28/22 Update Mod Manager
+
+Mod Manager ver 1.4
+
+Finished the new skin and adjusted the how you skin the app. Posted new skin.
+
+Added new way for mod creators to quickly update all their mods with one click.
+
+
+
 12/18/22 Update Mod Manager
 
 Mod Manager ver 1.3
