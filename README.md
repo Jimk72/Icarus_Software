@@ -7,6 +7,8 @@ Finished the new skin and adjusted the how you skin the app. Posted new skin.
 
 Added new way for mod creators to quickly update all their mods with one click.
 
+How video can be watched here: https://youtu.be/mhRIE7AsFXk
+
 
 
 12/18/22 Update Mod Manager
