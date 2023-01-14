@@ -13,6 +13,8 @@ Mod Manager ver 1.5
     -Added UnZip functionality for mods that are zipped(Multiple mods)
     -Added new Database integration to allow easy access to mods and allow one click extraction from their github.
     -Several small tweeks and bug fixes
+    
+How to video on new features: https://youtu.be/F1tEYusmwPo    
 
 12/28/22 Update Mod Manager
 
