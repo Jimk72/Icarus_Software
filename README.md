@@ -1,4 +1,19 @@
 # Icarus_Mod_manager
+1/28/23 Update Mod Manager
+
+Mod Manager ver 1.5
+
+    -Added drag and drop functionality.
+    -Changed skin system to use folders instead of only one file.
+    -Adjusted new modders options section in settings.
+    -Added create zipped EXMOD file option.
+    -Added new integration with Mod Editor. Can now add mods from Mod Editor directly to your Mod Manager settup.
+    -ReCoded how mods are extracted to allow multiple ways to accept PAK files
+    -Added ZIP functionality for new EXMOD types.
+    -Added UnZip functionality for mods that are zipped(Multiple mods)
+    -Added new Database integration to allow easy access to mods and allow one click extraction from their github.
+    -Several small tweeks and bug fixes
+
 12/28/22 Update Mod Manager
 
 Mod Manager ver 1.4
