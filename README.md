@@ -1,5 +1,13 @@
 # Icarus_Mod_manager
-1/28/23 Update Mod Manager
+1/15/23 Update Mod Manager
+
+Mod Manager ver 1.5
+
+Reuploaded as there was a small UI bug and I forgot to remove some testing features.
+DONOT use the "Get All" button!!!
+
+
+1/14/23 Update Mod Manager
 
 Mod Manager ver 1.5
 
