@@ -1,6 +1,8 @@
 {
-   "IMMlatestversion":"1.6",
+   "IMMlatestversion":"1.5",
+   "IMMdownloadURL":"https://github.com/Jimk72/Icarus_Software/raw/main/IcarusModManager1_5.zip",
    "IMElatestversion":"3.5",
+   "IMEdownloadURL":"https://github.com/Jimk72/Icarus_Software/raw/main/Icarus%20Mod%20Editor%20Ver3_5.zip",
    "updaterversion":"1.0""bugfixes":[
       {
          "bugfixes1":"-Fixed deletefile missing delimiter after data folder."
