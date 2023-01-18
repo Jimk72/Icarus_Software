@@ -1,0 +1,14 @@
+{
+   "IMMlatestversion":"1.6",
+   "IMElatestversion":"3.6",
+   "updaterversion":"1.0""bugfixes":[
+      {
+         "bugfixes1":"-Fixed deletefile missing delimiter after data folder."
+      }
+   ],
+   "newfeatures":[
+      {
+         "newfeatures1":"-Added download of readmeURL to display in database page."
+      }
+   ]
+}
