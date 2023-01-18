@@ -1,6 +1,6 @@
 {
    "IMMlatestversion":"1.6",
-   "IMElatestversion":"3.6",
+   "IMElatestversion":"3.5",
    "updaterversion":"1.0""bugfixes":[
       {
          "bugfixes1":"-Fixed deletefile missing delimiter after data folder."
