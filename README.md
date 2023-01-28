@@ -1,13 +1,30 @@
 # Icarus_Mod_manager
+
+1/28/23 Update Mod Manager
+
+Mod Manager ver 1.6
+
+    -Added new Mod Developer form to assist with updating json of Developers mods.
+    -Added new json data to the top of EXMOD file format to now include data from database.
+    -Added compare function for updated mods. This will compare the version you have with the version in the database and show you if there is an update.
+    -Mods that you currently have extracted into ModManager are now grayed out in database.
+    -Redid database form to better show the mods and the readme data.
+    -Updated skin and layout to have more room for mods lists.
+    -Changed the way skins are used. Now skins are selected as a folder. The new and original skins are in the new Skins_Folder.
+    -Added functionality for the new EXMODZ file type. 
+    -Added new button that checks if there is an updated version of ModManager and allows one click update if one is available.
+    -Added forced admin rights to help remove the majority of issues that happen from not properly enabling it on the users end.
+    -Removed popup notifying you that the mod you are extracting may not be up to date.
+    -Added more checks for json errors to help prrevent crashes.
+    -Added auto reload to the built in editor so when you make changes and save it will reload to make sure there are no syntax errors in your json.
+    -Changed name of Update Current Mods button to Update Installed Mods
+    -Added auto update for data folder. When a game update happens the next time you run IMM it will auto update the data folder.
+    -Updated many backend functions to work with the new EXMOD json header. 
+    -Main page now displays version and author if mod contains new json header when a mod is clicked.
+    -Misc. bug fixes from ver 1.5
+    -Next version I plan on changing the folder format. All mods will be in a Mods folder to help clean up main folder.
+
 1/15/23 Update Mod Manager
-
-Mod Manager ver 1.5
-
-Reuploaded as there was a small UI bug and I forgot to remove some testing features.
-DONOT use the "Get All" button!!!
-
-
-1/14/23 Update Mod Manager
 
 Mod Manager ver 1.5
 
@@ -21,8 +38,6 @@ Mod Manager ver 1.5
     -Added UnZip functionality for mods that are zipped(Multiple mods)
     -Added new Database integration to allow easy access to mods and allow one click extraction from their github.
     -Several small tweeks and bug fixes
-    
-How to video on new features: https://youtu.be/F1tEYusmwPo    
 
 12/28/22 Update Mod Manager
 
