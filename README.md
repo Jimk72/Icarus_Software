@@ -24,6 +24,12 @@ Mod Manager ver 1.6
     -Misc. bug fixes from ver 1.5
     -Next version I plan on changing the folder format. All mods will be in a Mods folder to help clean up main folder.
 
+1/28/23 Update Mod Editor
+
+Mod Manager ver 3.6
+
+    -Updated to keep compatible with ModManager 1.6
+
 1/15/23 Update Mod Manager
 
 Mod Manager ver 1.5
