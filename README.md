@@ -1,4 +1,13 @@
 # Icarus_Mod_manager
+1/29/23 Update Mod Manager
+
+Mod Manager ver 1.6.1
+
+    -Fixed bug creating invalid modinfo.json file.
+    -Removed testing button and edits from Modders page.
+    -Update database now just updates database and only downloads files if it hasn't already been downloaded.
+    -Right clicking update database allows you to select refresh all files.
+    -Added markup removal system for readme files.
 
 1/28/23 Update Mod Manager
 
