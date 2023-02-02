@@ -3,18 +3,18 @@
     {
       "name": "Icarus Mod Manager Full",
       "author": "Jimk72",
-      "version": "1.6",
+      "version": "1.6.2",
       "compatibility": "all",
       "description": "Full Release. Allows merging of mods and installation into Icarus game.",
       "fileType": "zip",
-      "fileURL": "https://github.com/Jimk72/Icarus_Software/raw/main/IcarusModManager_1_6.zip",
+      "fileURL": "https://github.com/Jimk72/Icarus_Software/raw/main/IcarusModManager_1_6_2_Full.zip",
       "imageURL": ""
     },
     {
       "name": "Icarus Mod Manager",
       "author": "Jimk72",
       "version": "1.6.2",
-      "compatibility": "IMM ver 1.6",
+      "compatibility": "IMM ver 1.6+",
       "description": "Patch Only! Allows merging of mods and installation into Icarus game.",
       "fileType": "zip",
       "fileURL": "https://github.com/Jimk72/Icarus_Software/raw/main/IcarusModManager_1_6_2_Patch.zip",
