@@ -1,4 +1,13 @@
 # Icarus_Mod_manager
+2/1/23 Update Mod Manager
+
+Mod Manager ver 1.6.2
+
+    -Fixed bug deleting UASSET files from leveling mods.
+    -Fixed search text remaining.
+    -Fixed refresh of database when downloading/installing a mod defaulting to all.
+    -Added rightclick option for Open Mods folder.
+
 1/29/23 Update Mod Manager
 
 Mod Manager ver 1.6.1
