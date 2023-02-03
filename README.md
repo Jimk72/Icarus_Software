@@ -1,4 +1,9 @@
 # Icarus_Mod_manager
+2/2/23 Update Mod Manager
+
+Mod Manager ver 1.6.3
+    -Fixed bug that was preventing notification that there was an data folder update!
+
 2/1/23 Update Mod Manager
 
 Mod Manager ver 1.6.2
