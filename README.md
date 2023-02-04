@@ -6,6 +6,7 @@ Mod Manager ver 1.6.4
     -Updated database system to work with new version of modinfo.json
     -Updated exmod header to be compatible with 1.7.0 update to be released at a later date.
     -Updated modder section to comply with new database json format.
+    -Changed main page UI image size to 512x512 to be compatible with database images.
 
 
 2/2/23 Update Mod Manager
