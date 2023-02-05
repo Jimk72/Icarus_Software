@@ -1,6 +1,13 @@
 # Icarus_Mod_manager
 2/4/23 Update Mod Manager
 
+Mod Manager ver 1.6.5
+
+    -Fixed bug with created modinfo.json
+    
+    
+2/4/23 Update Mod Manager
+
 Mod Manager ver 1.6.4
 
     -Updated database system to work with new version of modinfo.json
