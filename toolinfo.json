@@ -15,7 +15,7 @@
       "author": "Jimk72",
       "version": "1.6.7",
       "compatibility": "IMM ver 1.6+",
-      "description": "Patch Only! Allows merging of mods and installation into Icarus game.",
+      "description": "Patch Only! Must be installed from within Mod Manager",
       "fileType": "zip",
       "fileURL": "https://github.com/Jimk72/Icarus_Software/raw/main/IMM_Patch_Only.zip",
       "imageURL": ""
