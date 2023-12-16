@@ -23,11 +23,11 @@
     {
       "name": "Icarus Mod Editor",
       "author": "Jimk72",
-      "version": "3.6",
+      "version": "3.8",
       "compatibility": "all",
       "description": "Allows creation of mods and installation into Icarus game.",
       "fileType": "zip",
-      "fileURL": "https://github.com/Jimk72/Icarus_Software/raw/main/IcarusModEditorVer3_6.zip",
+      "fileURL": "https://github.com/Jimk72/Icarus_Software/raw/main/IcarusModEditorPatchOnly.zip",
       "imageURL": ""
     }
   ]
