@@ -1,4 +1,11 @@
 # Icarus_Mod_manager
+
+12/30/23 This version is no longer maintained. Please download the newer version 2.0.0 from link provided. The new version IS NOT backwards compatible so you will need to create a new folder for it and re install the mods you want from the database.
+
+IMM 2.0.0: https://github.com/Jimk72/Icarus-Mod-Manager-Beta/blob/main/Icarus_Mod_Manager_2_0_0.zip
+Instructions: https://youtu.be/kpLynnXJzSE?si=dvASv517MTG_N7dK
+
+
 2/4/23 Update Mod Manager
 
 Mod Manager ver 1.6.6
