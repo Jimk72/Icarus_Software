@@ -3,21 +3,21 @@
      {
       "name": "Icarus Mod Manager 2.0 Full",
       "author": "Jimk72",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "compatibility": "all",
-      "description": "Full Release. Icarus Mod Manager 2.0.0 this is not backwards compatible with previous versions! The folder structure has changed. Please create a new folder for this to be unzipped into.",
+      "description": "Full Release. Icarus Mod Manager 2.1.0 this is not backwards compatible with previous 1.6.7 or earlier versions! The folder structure has changed. Please create a new folder for this to be unzipped into.",
       "fileType": "zip",
-      "fileURL": "https://github.com/Jimk72/Icarus-Mod-Manager-Beta/raw/main/Icarus_Mod_Manager_2_0_0.zip",
+      "fileURL": "https://github.com/Jimk72/Icarus-Mod-Manager-Beta/raw/main/Icarus_Mod_Manager_2_1_0.zip",
       "imageURL": ""
     },
     {
       "name": "Icarus Mod Editor",
       "author": "Jimk72",
-      "version": "3.8",
+      "version": "3.9",
       "compatibility": "all",
       "description": "Allows creation of mods and installation into Icarus game.",
       "fileType": "zip",
-      "fileURL": "https://github.com/Jimk72/Icarus_Software/raw/main/IcarusModEditorVer3_8.zip",
+      "fileURL": "https://github.com/Jimk72/Icarus_Software/raw/main/IcarusModEditorVer3_9.zip",
       "imageURL": ""
     }
   ]
