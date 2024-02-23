@@ -2,7 +2,7 @@
 
 ## 2/23/24 Ver 2.1.0
 
-IMM 2.1.0: [https://github.com/Jimk72/Icarus-Mod-Manager-Beta/blob/main/Icarus_Mod_Manager_2_1_0.zip](https://github.com/Jimk72/Icarus_Software/raw/main/Icarus_Mod_Manager_2_1_0.zip)
+IMM 2.1.0: https://github.com/Jimk72/Icarus_Software/raw/main/Icarus_Mod_Manager_2_1_0.zip
 
 -Redid UI to allow new merge options.
 
