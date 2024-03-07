@@ -1,5 +1,11 @@
 # Icarus Mod Manager 2.1 
 
+## 3/6/24 Zip File changes!!
+
+-From now on UnrealPak will be seperate from IMM as for some reason if I add them to the same Zip file it registers as a trojan virus? If I put them in 2 different zip files they are fine.
+
+To resolve this just download the UnrealPak.zip file and unzip it into the same folder you unzipped the Mod Manager.
+
 ## 2/23/24 Ver 2.1.0
 
 IMM 2.1.0: https://github.com/Jimk72/Icarus_Software/raw/main/Icarus_Mod_Manager_2_1_0.zip
