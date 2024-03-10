@@ -1,10 +1,27 @@
-# Icarus Mod Manager 2.1 
-
-## 3/6/24 Zip File changes!!
+# 3/6/24 Zip File changes!!
 
 -From now on UnrealPak will be seperate from IMM as for some reason if I add them to the same Zip file it registers as a trojan virus? If I put them in 2 different zip files they are fine.
 
 To resolve this just download the UnrealPak.zip file and unzip it into the same folder you unzipped the Mod Manager.
+
+# 3/10/24 Ver 2.1.1
+
+## Quality of Life Update!
+
+-IMM now reloads the last merged list at start.
+
+-Added a button on right side to Reload last merged list at any time.
+
+-IMM now saves the last merged list in its own folder for access anytime(LastMergedMods.txt).
+
+-IMM now saves the list of merged mods in your mods folder along with IMM_Merged_Mod_P.pak called IMM_Merged_Mod.txt this is for servers so you can copy both files to your servers mods folder and always know what mods are in the IMM_Merged_Mod_P.pak file.
+
+-Added the ability to add merge options to game with no mods selected. 
+
+  Just select the merge options you want to add and click Install All Listed Mods with no mods added to the list. IMM will pop up a question asking if you want to create a mod with the merge options and add to game.
+
+-IMM now saves the merged Options you have selected when you close it, and restores those option the next time you run it.
+
 
 ## 2/23/24 Ver 2.1.0
 
