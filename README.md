@@ -4,6 +4,12 @@
 
 To resolve this just download the UnrealPak.zip file and unzip it into the same folder you unzipped the Mod Manager.
 
+# Icarus Mod Manager 2.1 
+
+## 3/18/24 Ver 2.1.2
+
+-Added Download/install for UnrealPak for new users
+
 # 3/10/24 Ver 2.1.1
 
 ## Quality of Life Update!
