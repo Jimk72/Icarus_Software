@@ -10,6 +10,14 @@ To resolve this just download the UnrealPak.zip file and unzip it into the same 
 
 # Icarus Mod Manager 2.1 
 
+## 4/1/24 Ver 2.1.3
+
+-Added Show Avail. Updates button on the Mod Downloads form at the top right side. This will show any mods you have extracted that have an updated version available.
+
+-Added Show New button on the mods downloads form at the top right. This will display any mods that have been added since the last time you did an update Local Database check.
+
+-Added Delete ALL extracted mods to the pop up menu in the Extracted Mods section. This will remove all extracted mods from your IMM folders. This was a requested feature.
+
 ## 3/18/24 Ver 2.1.2
 
 -Added Download/install for UnrealPak for new users
