@@ -14,7 +14,7 @@
 
 Insert file at location. This will allow you to add the header needed for a file in the editor. Selecting this will show a list of all the games files and allow you to select one. After it is add, just click save and it will expand the json and propperly format it, then click Re-Load in the upper left corner for the file to show in left list.
 
-Merge existing mod into this one. This allows you to merge an existing mod with the currently editing one. Will copy all files and merge the extracted json. 
+Merge existing mod into this one. This allows you to merge an existing mod with the currently editing one. Will copy all files and merge the extracted json. I also added Blank Craftable Item and Blank Consumable Item mods to my github for easily adding these to a new or existing mod.
 
 Open mods folder. This will open the folder of the currently editing mod.
 
