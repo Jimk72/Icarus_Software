@@ -1,5 +1,9 @@
 # Icarus Mod Manager 2.1 
 
+## 6/16/24 Ver 2.1.6
+
+-Fixed bug with multiple new Items with same name not being added to pak file.
+
 ## 5/29/24 Ver 2.1.5
 
 -Changed show message of invalid date to add line to log that mod contains invalid date.
