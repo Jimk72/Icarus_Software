@@ -1,5 +1,9 @@
 # Icarus Mod Manager 2.1 
 
+## 6/29/24 Ver 2.1.7
+
+-Improved the Merge efficiency.
+
 ## 6/16/24 Ver 2.1.6
 
 -Fixed bug with multiple new Items with same name not being added to pak file.
