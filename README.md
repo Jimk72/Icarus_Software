@@ -1,4 +1,16 @@
-# Icarus Mod Manager 2.1 
+# Icarus Mod Manager 2.2 
+
+## 8/15/24 Ver 2.2.0
+
+-Fixed rename mod issues.
+
+-Added ability to unpak games pak files just like my mod editor(Make sure Mod developement is enabled in settings) You will also need to add the oodle compression plugin to your unrealPak folder!
+
+-Fixed issues with no text displaying when checking for update.
+
+-Added option to refresh database and update local files to save time when you dont need to update all local images/text files.
+
+-added several new menu items when right clicking in the editing screen.
 
 ## 7/30/24 Ver 2.1.9
 
