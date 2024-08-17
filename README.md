@@ -1,5 +1,13 @@
 # Icarus Mod Manager 2.2 
 
+## 8/17/24 Ver 2.2.1
+
+-Unlocked the Full UI editor(Right click in the json editor and select Open UI Editor)
+
+-Removed the right click menu in the settings form that used to allow edits.
+
+-Fixed another pop up that has no text.
+
 ## 8/15/24 Ver 2.2.0
 
 -Fixed rename mod issues.
