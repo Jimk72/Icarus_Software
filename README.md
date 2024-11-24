@@ -1,5 +1,23 @@
 # Icarus Mod Manager 2.2 
 
+# Icarus Mod Manager 2.2 
+
+## 9/23/24 Ver 2.2.3
+
+-Fixed error on run issue.
+
+-Added second editor. You can edit mods in 2 seperate editors incase you want to look at one mod while working on the other.
+
+-Added a few editor features to the menus.
+
+-Fixed issue with auto enabling extract updates which causes multiple update extractions for new users.
+
+## 8/18/24 Ver 2.2.2
+
+-Fixed skinning issues with a few UI items.
+
+-Fixed the ui font not changin in all areas.
+
 ## 8/17/24 Ver 2.2.1
 
 -Unlocked the Full UI editor(Right click in the json editor and select Open UI Editor)
