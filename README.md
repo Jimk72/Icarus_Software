@@ -1,7 +1,5 @@
 # Icarus Mod Manager 2.2 
 
-# Icarus Mod Manager 2.2 
-
 ## 9/23/24 Ver 2.2.3
 
 -Fixed error on run issue.
