@@ -1,5 +1,33 @@
 # Icarus Mod Manager 2.2 
 
+
+## 12/5/24 Ver 2.2.5
+
+-Fixed show out dated mods value not saving.
+
+-Merged list now is restored when importing pak mods to IMM.
+
+-Changed UI to be more of a showcase for selected mod rather than a lot of files on screen.
+
+-Added Show Files View option in settings
+       Default in disabled and removes the files list when you click on a mod. This allows a nicer UI for basic uses that dont care about the files that a mod contains.
+
+-Added Add Item to Mod option in the right click menu when editing a mod.
+        This allows you to add all the json from premade templates or you can add ALL the json for any item in game you select. This will drascticaly reduce the time to create custom items in mods!
+
+-Added new file called NewItemOptions.json. This contains several Item Templates that can be added to a mod to quickly add items and all the necessary json files.
+
+-Added Re-Extract current json in Editor. With the introduction of adding item to mod, there was default json added that may never be changed when editing an added Item. This will merge mod back 
+into game files and then re extract it back out to remove any default json that is not needed in the extracted mod.
+
+-Changed several Core functions to be more dynamic so you can merge and extract without creating PAK files and disrupting mods header info.
+
+-Reduced the run count for displaying the Introduction screen from 20 down to 10!
+
+## 10/20/24 Ver 2.2.4
+
+-Fixed 2 bugs when editing a mod and you select add file to mod. Now it will prevent you from placing the file json in an invalid location. Also now refreshes the json automaticaly.
+
 ## 9/23/24 Ver 2.2.3
 
 -Fixed error on run issue.
