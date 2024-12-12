@@ -1,5 +1,12 @@
 # Icarus Mod Manager 2.2 
 
+## 12/11/24 Ver 2.2.6
+
+-Changed local folder to a variable for changes in future updates 
+
+-Changed the Delphi Class I use to download files to help with compatibility for systems with out IExplorer.
+
+-Fixed bug in merge game Item json into mod.
 
 ## 12/5/24 Ver 2.2.5
 
