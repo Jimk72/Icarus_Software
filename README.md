@@ -1,7 +1,7 @@
 # Icarus Mod Editor 4.1
 -Fixed issues with updating data folder.
 
--Now has an option to use alternative function call for UnrealPak incase your windows version has issues with the older method to run UnrealPak with the correct parameters.
+-Now has an option to use alternative function call for UnrealPak incase your windows version has issues with the older method to run UnrealPak with the correct parameters. (On the Editor Options page to the far right called Use Alternative Unpack Method)
 
 -UnrealPak now comes in the zip file to make sure you have the correct version and compression plugin.
 
