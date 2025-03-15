@@ -7,6 +7,12 @@
 
 # Icarus Mod Manager 2.2 
 
+## 12/11/24 Ver 2.2.7
+
+-Removed several notifications for weekly updates as requested.
+
+-Added several new functions for future features.
+
 ## 12/11/24 Ver 2.2.6
 
 -Changed local folder to a variable for changes in future updates 
