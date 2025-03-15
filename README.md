@@ -1,3 +1,7 @@
+# Icarus Mod Editor 4.1
+-Fixed issues with updating data folder.
+-UnrealPak now comes in the zip file to make sure you have the correct version and compression plugin.
+
 # Icarus Mod Manager 2.2 
 
 ## 12/11/24 Ver 2.2.6
