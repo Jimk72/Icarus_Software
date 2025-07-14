@@ -5,6 +5,8 @@
 
 -UnrealPak now comes in the zip file to make sure you have the correct version and compression plugin.
 
+#  Icarus Mod Manager 2.3
+
 ## 7/14/25 Ver 2.3.1
 
 -Rebuilt database update system to allow for more than 300 mods.
