@@ -5,7 +5,28 @@
 
 -UnrealPak now comes in the zip file to make sure you have the correct version and compression plugin.
 
-# Icarus Mod Manager 2.2 
+## 7/14/25 Ver 2.3.1
+
+-Rebuilt database update system to allow for more than 300 mods.
+
+-Added the ability to remember IMMs location on your screen.
+
+## 5/14/25 Ver 2.3.0
+-Fix merge issues with only selecting Speed Crafting.
+
+#  Icarus Mod Manager 2.2
+
+## 5/4/25 Ver 2.2.9
+
+-Fix for date error.
+
+## 5/4/25 Ver 2.2.8
+
+-Added the ability to have custom names for mods in your Extracted Mods list. Right click in the section and select Create Mods Language File. This will Create a file in IMMs app folder called LanguageMods.ini. Open this file and you can add custom names to the right hand side of the lines.
+
+-Added the ability to backup an extracted mod so you can try editing it without the worry of messing it up. Right click mod in the Extracted mods list and select Create mod backup.
+
+-To load a created backup, just select the mod and right click and select Load Mod Backup. 
 
 ## 3/15/25 Ver 2.2.7
 
