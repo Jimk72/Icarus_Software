@@ -7,6 +7,35 @@
 
 #  Icarus Mod Manager 2.3
 
+## 10/27/25 Ver 2.3.4
+
+-Fixed bug when using Refresh Local Files it would only download the first 301 mods.
+
+-All PAK mods when downloaded from the online database will use the modinfo.json from the author to create the mods folder name. 
+
+-Changed the display info to check for any file called readme if readme.txt file is not avail in the mods folder.
+
+
+## 10/25/25 Ver 2.3.3
+
+-Added Show notes option to editor 1, This will display a form that saves personal notes for editing mods.
+
+-Added Remove selected items from list for the Selection list in the Original JSON form.
+
+-polished background functions to quickly create mods.
+
+
+## 8/24/25 Ver 2.3.2
+
+-Fixed bug with downloading EXMODZ files with spaces in them.
+
+-Released mod editing features for quickly filtering and creating mods in the editor.
+
+-Updated backend code to be more efficient when merging, editing mods.
+
+-Modified Date comparison functions to be more compatible with other countries date formats.
+
+
 ## 7/14/25 Ver 2.3.1
 
 -Rebuilt database update system to allow for more than 300 mods.
