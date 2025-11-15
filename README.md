@@ -7,8 +7,20 @@
 
 #  Icarus Mod Manager 2.3
 
-## 10/27/25 Ver 2.3.4
+## 11/15/25 Ver 2.3.6
+-Added to Full release.
 
+-Several changes to help prevent Exception Errors.
+
+-Added Mod Json Viewer to the Edit Mods Tab.
+
+-Database now should go back to filtered mode after downloading a mod.
+
+
+## 11/9/25 Ver 2.3.5
+-Added special mod file considerations for laanp and ShadowWolf2099 filename issues. Mod name and folder will no longer use pak filename.
+
+## 10/27/25 Ver 2.3.4
 -Fixed bug when using Refresh Local Files it would only download the first 301 mods.
 
 -All PAK mods when downloaded from the online database will use the modinfo.json from the author to create the mods folder name. 
@@ -17,23 +29,18 @@
 
 
 ## 10/25/25 Ver 2.3.3
-
 -Added Show notes option to editor 1, This will display a form that saves personal notes for editing mods.
 
 -Added Remove selected items from list for the Selection list in the Original JSON form.
 
 -polished background functions to quickly create mods.
 
+## 9/6/25 Ver 2.3.2
+-Added fix for D_ProcessorRecipes.json changes
 
-## 8/24/25 Ver 2.3.2
+-Added sorting system for Name values if JSON files.
 
--Fixed bug with downloading EXMODZ files with spaces in them.
-
--Released mod editing features for quickly filtering and creating mods in the editor.
-
--Updated backend code to be more efficient when merging, editing mods.
-
--Modified Date comparison functions to be more compatible with other countries date formats.
+-Added several background functions to quickly create mods.
 
 
 ## 7/14/25 Ver 2.3.1
