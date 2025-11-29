@@ -5,7 +5,96 @@
 
 -UnrealPak now comes in the zip file to make sure you have the correct version and compression plugin.
 
-#  Icarus Mod Manager 2.3
+# Icarus Mod Manager 2.3
+
+## 11/29/25 Ver 2.3.8
+
+### -Fixed issues with some inventories having too many slots.
+
+### -Added Descriptions for Stacks and Slots mod so you can see what is changed.
+
+## 11/27/25 Ver 2.3.7
+### -Added New Merge options.
+
+### -Remove Weight: All Items weight 0
+
+### -Unlimited Ammo: All weapons do not use ammo(Must have atleast 1 in inventory to load into Weapon)
+
+### -Speed Boost
+
+Level 1:
+* Base Movement Speed: 455 from 355,
+* Crouch Movement Speed Coefficient: 75 from 56,
+* Sprint Movement Speed Coefficient: 250 from 200,
+* Swim Movement Speed Coefficient: 55 from 45,
+* Swim Sprint Movement Speed Coefficient: 175 from 150,
+* Tamed Creature Movement Speed: +25%,
+* Tamed Creature Maximum Stamina: +25%
+
+Level 2:
+* Base Movement Speed: 600 from 355,
+* Crouch Movement Speed Coefficient: 90 from 56,
+* Sprint Movement Speed Coefficient: 300 from 200,
+* Swim Movement Speed Coefficient: 70 from 45,
+* Swim Sprint Movement Speed Coefficient: 200 from 150,
+* Tamed Creature Movement Speed: +50%,
+* Tamed Creature Maximum Stamina: +50%
+
+### -Player Boost
+
+Level 1:
+* Maximum Health: 350 from 300,
+* Maximum Stamina: 250 from 200,
+* Base Weight Capacity: 300 from 100,
+* Food Consumption Per Hour: 400 from 600,
+* Water Consumption Per Hour: 600 from 900,
+* Oxygen Consumption Per Hour: 200 from 480,
+* Health Regen Per Minute: 35 from 25,
+* Minimum Fall Damage Velocity: 11000,  (Removes Fall Damage)
+* Maximum Fall Damage Velocity: 22250,  (Removes Fall Damage)
+* Cold Resistance: 30 from 0,
+* Heat Resistance: 30 from 0,
+* Stamina Regen Per Minute: 3000 from 2400,
+* Collision Damage Resistance: 100 from 25,
+* Enable Highlight Small Animals When ADS,
+* Enable Highlight Medium Animals When ADS,
+* Enable Highlight Large Animals When ADS,
+* Enable Automatic Wood Collection On Harvest
+* Enable Map Can See World Bosses
+
+Level 2:
+* Maximum Health: 400 from 300,
+* Maximum Stamina: 300 from 200,
+* Oxygen Consumed Per Stamina Used: 2 from 4,
+* Base Weight Capacity: 500 from 100,
+* Food Consumption Per Hour: 200 from 600,
+* Water Consumption Per Hour: 300 from 900,
+* Oxygen Consumption Per Hour: 100 from 480,
+* Health Regen Per Minute: 50 from 25,
+* Minimum Fall Damage Velocity: 11000,  (Removes Fall Damage)
+* Maximum Fall Damage Velocity: 22250,  (Removes Fall Damage)
+* Cold Resistance: 60 from 0,
+* Heat Resistance: 60 from 0,
+* Stamina Regen Per Minute: 3800 from 2400,
+* Collision Damage Resistance: 100 from 25,
+* Skinning Speed: 20 from 0,
+* Enable Highlight Small Animals When ADS,
+* Enable Highlight Medium Animals When ADS,
+* Enable Highlight Large Animals When ADS,
+* Base Animal Highlight Distance: 17500,
+* Enable Automatic Wood Collection On Harvest
+* Enable Map Can See World Bosses
+
+### -Stacks Level 1 and 2: Increases the stacking amounts of Items
+
+### -Slots 2X and 4X: Increases the number of slots in Player/Items Inventories
+
+### -Disable Temps: Removes the temperatures from game.
+
+### -XP Boost
+* Level 1: Boosts XP by %500
+* Level 2: Boosts XP by %1000
+
 
 ## 11/15/25 Ver 2.3.6
 -Added to Full release.
