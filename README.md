@@ -16,7 +16,7 @@
 ## 11/27/25 Ver 2.3.7
 ### -Added New Merge options.
 
-### -Remove Weight: All Items weight 0
+### -Remove Weight: Sets All Item weights to 0
 
 ### -Unlimited Ammo: All weapons do not use ammo(Must have atleast 1 in inventory to load into Weapon)
 
