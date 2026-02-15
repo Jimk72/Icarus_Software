@@ -7,6 +7,7 @@
 
 # Icarus Mod Manager 2.4
 
+
 ## 2/15/26 Ver 2.4.2
 
 ### -Added new editing feature:
