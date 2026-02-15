@@ -7,6 +7,16 @@
 
 # Icarus Mod Manager 2.3
 
+## 12/27/25 Ver 2.3.9
+
+### -Changed the way Base_Stats in Stats\D_CharacterStartingStats.json is extracted and merged.
+	JSON in the "StatsGranted" section are now considered seperate values. This allows mods to add 1 stat or many stats and not effect unchanged stats or stats from other mods.
+
+### -Added Descriptions for the rest of the Merge options.
+
+### -Changed how Speed Crafting effects the Crafting recipe. It now considers if there are resource inputs(Water, Milk, Biofuel) and resource outputs(Water, Milk, Biofuel) before modifying the speed.
+
+
 ## 11/29/25 Ver 2.3.8
 
 ### -Fixed issues with some inventories having too many slots.
