@@ -1,13 +1,13 @@
 # Icarus Mod Editor 4.1
--Fixed issues with updating data folder.
+### -Fixed issues with updating data folder.
 
--Now has an option to use alternative function call for UnrealPak incase your windows version has issues with the older method to run UnrealPak with the correct parameters. (On the Editor Options page to the far right called Use Alternative Unpack Method)
+### -Now has an option to use alternative function call for UnrealPak incase your windows version has issues with the older method to run UnrealPak with the correct parameters. (On the Editor Options page to the far right called Use Alternative Unpack Method)
 
--UnrealPak now comes in the zip file to make sure you have the correct version and compression plugin.
+### -UnrealPak now comes in the zip file to make sure you have the correct version and compression plugin.
 
 # Icarus Mod Manager 2.4
 
-2/15/26 Ver 2.4.2
+## 2/15/26 Ver 2.4.2
 
 ### -Added new editing feature:
 ####	When editing a file in the mod editor you can right click the Items list and select Copy List. This will copy all modded item to clipboard and an internal list. There is also an Option to click Display Original with these Items hidden. This will open the Original json file and hide all the already modded Items so only the unmodded items show so you and see what new Items may have been added that you didnt changes yet. Very useful for stacks mods as you can then use the filter system to narrow down whats left in that list to only items that have stacks ect..
