@@ -5,6 +5,30 @@
 
 -UnrealPak now comes in the zip file to make sure you have the correct version and compression plugin.
 
+# Icarus Mod Manager 2.4
+
+2/15/26 Ver 2.4.2
+
+### -Added new editing feature:
+###	When editing a file in the mod editor you can right click the Items list and select Copy List. This will copy all modded item to clipboard and an internal list. There is also an Option to click Display Original with these Items hidden. This will open the Original json file and hide all the already modded Items so only the unmodded items show so you and see what new Items may have been added that you didnt changes yet. Very useful for stacks mods as you can then use the filter system to narrow down whats left in that list to only items that have stacks ect..
+	When using the Copy List feature in the editor you can then right click the items list on the View Originals page and select Remove Items matching copied lists and this will remove any item that was in your list of already modded items.
+
+### -Updated the update mods database to fetch more than 400 mods as we are now over 411 avail. From now on it should update and load an unlimited number of mods from the online database.
+ 
+
+## 2/1/26 Ver 2.4.1
+
+### -Added time stamps to important Log messages.
+
+### -Fixed Remove weight merge option from crashing the game. When only it was selected the stack size was going to 0.
+
+## 1/2/26 Ver 2.4.0
+
+### -Fixed Merge options for new crafting recipies introduced in Icarus Week 213.
+
+### -Added new Search Form for searching all the games JSON files. Avail in upper right hand corner in the Editor 1."Search Original JSON" button. Shows every File, Item, and the selected Items JSON as well as every way it is used in the JSON(Right side column). 
+
+
 # Icarus Mod Manager 2.3
 
 ## 12/27/25 Ver 2.3.9
