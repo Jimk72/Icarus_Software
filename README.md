@@ -8,7 +8,7 @@
 # Icarus Mod Manager 2.4
 
 
-## 5/4/26 Ver 2.4.4
+## 5/4/26 Ver 2.4.4 Beta
 
 ### -Streamlined Load up, removed un needed setup functions.
 
@@ -32,7 +32,7 @@
 * Added ability to refresh local files for individual database entries.
 * Added ability to view what the database info is for a selected mod.
 
-## 3/14/26 Ver 2.4.3
+## 3/14/26 Ver 2.4.3 Beta
 
 ### -Fixed bug when checking for Duplicates the items list would remain in Sorted view(Alphabetically).
 
@@ -44,7 +44,7 @@
 
 ### -Added New Update feature that allows custom options when upgrading IMM(New Skin).
 
-## 2/15/26 Ver 2.4.2
+## 2/15/26 Ver 2.4.2 Beta
 
 ### -Added new editing feature:
 ####	When editing a file in the mod editor you can right click the Items list and select Copy List. This will copy all modded item to clipboard and an internal list. There is also an Option to click Display Original with these Items hidden. This will open the Original json file and hide all the already modded Items so only the unmodded items show so you and see what new Items may have been added that you didnt changes yet. Very useful for stacks mods as you can then use the filter system to narrow down whats left in that list to only items that have stacks ect..
@@ -53,13 +53,13 @@
 ### -Updated the update mods database to fetch more than 400 mods as we are now over 411 avail. From now on it should update and load an unlimited number of mods from the online database.
  
 
-## 2/1/26 Ver 2.4.1
+## 2/1/26 Ver 2.4.1 Beta
 
 ### -Added time stamps to important Log messages.
 
 ### -Fixed Remove weight merge option from crashing the game. When only it was selected the stack size was going to 0.
 
-## 1/2/26 Ver 2.4.0
+## 1/2/26 Ver 2.4.0 Full Release
 
 ### -Fixed Merge options for new crafting recipies introduced in Icarus Week 213.
 
