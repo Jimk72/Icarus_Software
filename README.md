@@ -8,6 +8,42 @@
 # Icarus Mod Manager 2.4
 
 
+## 5/4/26 Ver 2.4.4
+
+### -Streamlined Load up, removed un needed setup functions.
+
+### -Fixed IMM becoming unresponsive during merge/startup.
+
+### -Added Log entries to explain whats going on at startup.
+
+### -Fixed bug where IMM was checking for update/skin when initial run.
+
+### -Added Slots 3x option to merge options.
+
+### -Added new XP Boost settings. level 1 is %200, level 2 is %500 and Level 3 is %1000.
+
+### -Complete re code of the Downloads backend and minor changes to UI.
+
+### -Double clicking a mod to download and extract no longer resets the list UI, It modifies only the one line of the list to be less distruptive and maintain position.
+
+### -Added a right click menu to download list with the following features:
+
+* Added ability to download and extract multiple mods at a time. Current limit set to 100. Two Options, 1 downloads a mod and extracts it before moving on to the next, 2 Downloads all the mods and then extracts them.
+* Added ability to refresh local files for individual database entries.
+* Added ability to view what the database info is for a selected mod.
+
+## 3/14/26 Ver 2.4.3
+
+### -Fixed bug when checking for Duplicates the items list would remain in Sorted view(Alphabetically).
+
+### -Added ability to enable Sorting(Alphabetically) to be enabled in the Items Column in the editor.
+
+### -Added New Skin for the new DLC.
+
+### -Added New button on settings page to Change UI
+
+### -Added New Update feature that allows custom options when upgrading IMM(New Skin).
+
 ## 2/15/26 Ver 2.4.2
 
 ### -Added new editing feature:
@@ -28,7 +64,6 @@
 ### -Fixed Merge options for new crafting recipies introduced in Icarus Week 213.
 
 ### -Added new Search Form for searching all the games JSON files. Avail in upper right hand corner in the Editor 1."Search Original JSON" button. Shows every File, Item, and the selected Items JSON as well as every way it is used in the JSON(Right side column). 
-
 
 # Icarus Mod Manager 2.3
 
