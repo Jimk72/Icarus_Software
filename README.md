@@ -3,6 +3,14 @@
 # Full Release Icarus Mod Manager 2.4.0
 
 
+## 5/8/26 Ver 2.4.5
+
+### -Fixed error when clicking on a mod in the Merge list that has been deleted.
+
+### -Complete re write of the mods download system. Allows multi select for downloads and update local files.
+
+### -Made minor changes to the Downloads UI Page.
+
 ## 5/4/26 Ver 2.4.4 Beta
 
 ### -Streamlined Load up, removed un needed setup functions.
